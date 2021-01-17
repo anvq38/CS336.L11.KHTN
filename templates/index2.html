@@ -1,0 +1,100 @@
+<!doctype html>
+<title>Python Flask File Upload Example</title>
+
+<head> 
+	<title> 
+		How to get the file input by selected file 
+		name without the path using jQuery? 
+	</title> 
+
+	<style> 
+		h1 { 
+			color: green; 
+		} 
+		
+		body { 
+			text-align: center; 
+		} 
+		h2 {
+            color: blue;
+        }
+    
+		h4 { 
+			color: purple; 
+		} 
+	</style> 
+	<script src= 
+"https://code.jquery.com/jquery-1.12.4.min.js"> 
+	</script> 
+</head>
+<body> 
+	<h1> 
+        TRUY VẤN THÔNG TIN ĐA PHƯƠNG TIỆN 
+        <br>
+        CS336.L11.KHTN
+        <br>
+    <h4>
+        Thành viên: 
+        <br>
+            - Nguyễn Anh Khoa - Trần Thị Phương Thảo - Võ Quốc An
+            <br>
+                18520923     -       1852xxxx      -      18520440
+
+    </h4>
+    </h1>
+    <h1>
+        Music Retrieval 
+	</h1> 
+
+    <!-- <input type="file" id="geeks">  -->
+    
+<h2>Select a file to upload</h2>
+<p>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul class=flashes>
+		{% for message in messages %}
+		  <li>{{ message }}</li> <br>
+		  <!-- Top 5: <br>
+			1.	{{resul0}} <br>
+			2.	{{resul1}} <br>
+			3.	{{resul2}} <br>
+			4.	{{resul3}} <br>
+			5.	{{resul4}} <br>
+		 -->
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+</p>
+
+{% if filename %}
+	<!-- <div>
+        <img src="{{ url_for('display_image', filename=filename) }}">
+    </div> -->
+    
+    <audio controls>
+        
+        <source src="{{ url_for('display_image', filename=filename) }}" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+{% endif %}
+
+<form method="post" action="/" enctype="multipart/form-data">
+    <dl>
+		<p>
+			<input type="file" name="file" autocomplete="off" required>
+		</p>
+    </dl>
+    <p>
+		<input type="submit" value="Retrieval">
+		<h7>  </h7>
+	</p>
+</form>
+<!-- {{result}} -->
+{% for your_list_element in result %}
+<p> {{ your_list_element }} </p>
+{% endfor %}
+{{ mess1}} {{time1}}
+{{ mess2}} {{time2}}
+</body>
