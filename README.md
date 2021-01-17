@@ -4,6 +4,13 @@ Tìm kiếm bài hát dựa trên âm thanh truyền vào
 
 ## Installation
 - Language: Python3.x
-'''python
-- Module: requests, colorama
-'''
+- Module: librosa, python_speech_features, flask_ngrok, flask, Flask, annoy
+```python
+!pip install librosa python_speech_features flask_ngrok flask Flask annoy
+```
+## Usage
+- import package  
+- Run: Difine function  
+- Load features, songs từ drive 
+- Load cây annoy từ drive 
+- Run Demo
